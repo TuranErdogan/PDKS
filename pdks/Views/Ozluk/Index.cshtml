@@ -1,0 +1,147 @@
+﻿@model IEnumerable<pdks.Models.PersonelOzlukBilgileri>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TcKimlik)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Soyad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Unvan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KurumSicilNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CepTelefonu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Eposta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MedeniDurum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EvAdresi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Askerlik)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ehliyet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EngellilikDurumu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DogumTarihi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.İseGirisTarihi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AktifPasif)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CikisTarihi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EsiTc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EsiAdiSoyadi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EsiTelefon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EsiIsDurumu)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TcKimlik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Soyad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Unvan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KurumSicilNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CepTelefonu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Eposta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MedeniDurum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EvAdresi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Askerlik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ehliyet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EngellilikDurumu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DogumTarihi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.İseGirisTarihi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AktifPasif)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CikisTarihi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EsiTc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EsiAdiSoyadi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EsiTelefon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EsiIsDurumu)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

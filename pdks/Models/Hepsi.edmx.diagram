@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="dd9b8168f591410ba80803dc6b9423c2" Name="Diagram1">
+        <EntityTypeShape EntityType="PDKSModel.Belgeler" Width="1.5" PointX="4.25" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PDKSModel.Departmanlar" Width="1.5" PointX="0.625" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PDKSModel.IzinTakip" Width="1.5" PointX="6.25" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PDKSModel.PersonelCocuk" Width="1.5" PointX="0.5" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PDKSModel.PersonelEgitim" Width="1.5" PointX="5.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PDKSModel.PersonelKiyafet" Width="1.5" PointX="5.625" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PDKSModel.PersonelOzlukBilgileri" Width="1.5" PointX="3.5" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PDKSModel.PersonelPuantaj" Width="1.5" PointX="0.875" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PDKSModel.PersonelSaglikDurumlari" Width="1.5" PointX="6.375" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PDKSModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="PDKSModel.FK_Belgeler_PersonelOzlukBilgileri" ManuallyRouted="false" />
+        <AssociationConnector Association="PDKSModel.FK_PersonelOzlukBilgileri_Departmanlar" ManuallyRouted="false" />
+        <AssociationConnector Association="PDKSModel.FK_IzinTakip_PersonelOzlukBilgileri" ManuallyRouted="false" />
+        <AssociationConnector Association="PDKSModel.FK_PersonelCocuk_PersonelOzlukBilgileri" ManuallyRouted="false" />
+        <AssociationConnector Association="PDKSModel.FK_PersonelEgitim_PersonelOzlukBilgileri" ManuallyRouted="false" />
+        <AssociationConnector Association="PDKSModel.FK_PersonelKiyafet_PersonelOzlukBilgileri" ManuallyRouted="false" />
+        <AssociationConnector Association="PDKSModel.FK_PersonelPuantaj_PersonelOzlukBilgileri" ManuallyRouted="false" />
+        <AssociationConnector Association="PDKSModel.FK_PersonelSaglikDurumlari_PersonelOzlukBilgileri" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

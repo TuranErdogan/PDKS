@@ -10,7 +10,6 @@
 
     <div class="form-horizontal">
         <h1>Personel Özlük Bilgileri</h1>
-        <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.TcKimlik, labelText: "TC Kimlik", htmlAttributes: new { @class = "control-label col-md-2" })
@@ -37,7 +36,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Unvan, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Unvan, labelText: "Ünvan", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Unvan, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Unvan, "", new { @class = "text-danger" })
@@ -61,7 +60,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Eposta, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Eposta, labelText: "E-Posta Adresi", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Eposta, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Eposta, "", new { @class = "text-danger" })
@@ -69,7 +68,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.MedeniDurum, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.MedeniDurum, labelText: "Medeni Durum", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <div class="checkbox">
                     @Html.EditorFor(model => model.MedeniDurum)
@@ -79,7 +78,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.EvAdresi, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.EvAdresi, labelText: "Ev Adresi", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.EvAdresi, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.EvAdresi, "", new { @class = "text-danger" })
@@ -87,7 +86,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Askerlik, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Askerlik, labelText: "Askerlik Durumu", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Askerlik, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Askerlik, "", new { @class = "text-danger" })
@@ -103,7 +102,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.EngellilikDurumu, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.EngellilikDurumu, labelText: "Engellilik Durumu", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <div class="checkbox">
                     @Html.EditorFor(model => model.EngellilikDurumu)
@@ -113,7 +112,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.DogumTarihi, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.DogumTarihi, labelText: "Doğum Tarihi", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.DogumTarihi, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.DogumTarihi, "", new { @class = "text-danger" })
@@ -121,7 +120,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.İseGirisTarihi, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.İseGirisTarihi, labelText: "İşe Giriş Tarihi", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.İseGirisTarihi, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.İseGirisTarihi, "", new { @class = "text-danger" })

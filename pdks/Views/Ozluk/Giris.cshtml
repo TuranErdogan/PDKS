@@ -10,6 +10,7 @@
 
     <div class="form-horizontal">
         <h1>Personel Özlük Bilgileri</h1>
+        <br />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.TcKimlik, labelText: "TC Kimlik", htmlAttributes: new { @class = "control-label col-md-2" })
@@ -128,7 +129,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.AktifPasif, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.AktifPasif,labelText:"Aktif Pasif", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <div class="checkbox">
                     @Html.EditorFor(model => model.AktifPasif)
@@ -137,7 +138,7 @@
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(model => model.DepartmanId, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.DepartmanId,"Departman Id", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <div class="checkbox">
                     @Html.EditorFor(model => model.DepartmanId)
@@ -147,7 +148,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CikisTarihi, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.CikisTarihi,labelText:"Çıkış Tarihi", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.CikisTarihi, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.CikisTarihi, "", new { @class = "text-danger" })
@@ -155,7 +156,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.EsiTc, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.EsiTc, labelText:"Eşinin TC Numarası",htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.EsiTc, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.EsiTc, "", new { @class = "text-danger" })
@@ -163,7 +164,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.EsiAdiSoyadi, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.EsiAdiSoyadi, labelText:"Eşinin Adı Soyadı", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.EsiAdiSoyadi, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.EsiAdiSoyadi, "", new { @class = "text-danger" })
@@ -171,7 +172,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.EsiTelefon, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.EsiTelefon,labelText:"Eşinin Telefon Numarası" ,htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.EsiTelefon, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.EsiTelefon, "", new { @class = "text-danger" })
@@ -179,7 +180,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.EsiIsDurumu, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.EsiIsDurumu,labelText:"Eşinin İş Durumu" ,htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.EsiIsDurumu, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.EsiIsDurumu, "", new { @class = "text-danger" })
@@ -188,14 +189,14 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Ekle" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Listeyi Göster", "Index")
 </div>
 
 <script src="~/Scripts/jquery-3.4.1.min.js"></script>

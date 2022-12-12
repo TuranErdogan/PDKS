@@ -16,10 +16,12 @@ namespace pdks.Controllers
             var Bilgi = db.PersonelSaglikDurumlari.ToList();
             return View(Bilgi);
         }
+        [HttpGet]
         public ActionResult KayitEkle()
         {           
             return View();
         }
+        [HttpPost]
         public ActionResult KayitEkle(Models.PersonelSaglikDurumlari Saglik)
 
         {

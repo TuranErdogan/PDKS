@@ -1,193 +1,198 @@
 ﻿@model pdks.Models.PersonelOzlukBilgileri
 
 @{
-    ViewBag.Title = "Giris";
+    ViewBag.Title = "Personel Kayıt";
 }
-
+<style>
+    #labelPadding {
+        margin: 0px 0px 0px 10px;
+    }
+</style>
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
-    <div class="form-horizontal">
+    <div class="container-fluid">
         <h1>Personel Özlük Bilgileri</h1>
         <br />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
+        <div class="d-flex align-items-center">
             @Html.LabelFor(model => model.TcKimlik, labelText: "TC Kimlik", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-10 d-flex " id="labelPadding">
                 @Html.EditorFor(model => model.TcKimlik, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.TcKimlik, "", new { @class = "text-danger" })
             </div>
         </div>
-
-        <div class="form-group">
+        <br />
+        <div class="d-flex align-items-center ">
             @Html.LabelFor(model => model.Ad, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-10 d-flex " id="labelPadding">
                 @Html.EditorFor(model => model.Ad, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Ad, "", new { @class = "text-danger" })
             </div>
         </div>
-
-        <div class="form-group">
+        <br />
+        <div class="d-flex align-items-center">
             @Html.LabelFor(model => model.Soyad, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-10 d-flex " id="labelPadding">
                 @Html.EditorFor(model => model.Soyad, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Soyad, "", new { @class = "text-danger" })
             </div>
         </div>
-
-        <div class="form-group">
+        <br />
+        <div class="d-flex align-items-center">
             @Html.LabelFor(model => model.Unvan, labelText: "Ünvan", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-10 d-flex " id="labelPadding">
                 @Html.EditorFor(model => model.Unvan, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Unvan, "", new { @class = "text-danger" })
             </div>
         </div>
-
-        <div class="form-group">
+        <br />
+        <div class="d-flex align-items-center">
             @Html.LabelFor(model => model.KurumSicilNo, labelText: "Kurum Sicil Numarası", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-10 d-flex " id="labelPadding">
                 @Html.EditorFor(model => model.KurumSicilNo, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.KurumSicilNo, "", new { @class = "text-danger" })
             </div>
         </div>
-
-        <div class="form-group">
+        <br />
+        <div class="d-flex align-items-center">
             @Html.LabelFor(model => model.CepTelefonu, labelText: "Cep Telefonu", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-10 d-flex " id="labelPadding">
                 @Html.EditorFor(model => model.CepTelefonu, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.CepTelefonu, "", new { @class = "text-danger" })
             </div>
         </div>
-
-        <div class="form-group">
+        <br />
+        <div class="d-flex align-items-center">
             @Html.LabelFor(model => model.Eposta, labelText: "E-Posta Adresi", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-10 d-flex " id="labelPadding">
                 @Html.EditorFor(model => model.Eposta, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Eposta, "", new { @class = "text-danger" })
             </div>
         </div>
-
-        <div class="form-group">
+        <br />
+        <div class="d-flex align-items-center">
             @Html.LabelFor(model => model.MedeniDurum, labelText: "Medeni Durum", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-10 d-flex " id="labelPadding">
                 <div class="checkbox">
                     @Html.EditorFor(model => model.MedeniDurum)
                     @Html.ValidationMessageFor(model => model.MedeniDurum, "", new { @class = "text-danger" })
                 </div>
             </div>
         </div>
-
-        <div class="form-group">
+        <br />
+        <div class="d-flex align-items-center">
             @Html.LabelFor(model => model.EvAdresi, labelText: "Ev Adresi", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-10 d-flex " id="labelPadding">
                 @Html.EditorFor(model => model.EvAdresi, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.EvAdresi, "", new { @class = "text-danger" })
             </div>
         </div>
-
-        <div class="form-group">
+        <br />
+        <div class="d-flex align-items-center">
             @Html.LabelFor(model => model.Askerlik, labelText: "Askerlik Durumu", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-10 d-flex " id="labelPadding">
                 @Html.EditorFor(model => model.Askerlik, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Askerlik, "", new { @class = "text-danger" })
             </div>
         </div>
-
-        <div class="form-group">
+        <br />
+        <div class="d-flex align-items-center">
             @Html.LabelFor(model => model.Ehliyet, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-10 d-flex " id="labelPadding">
                 @Html.EditorFor(model => model.Ehliyet, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Ehliyet, "", new { @class = "text-danger" })
             </div>
         </div>
-
-        <div class="form-group">
+        <br />
+        <div class="d-flex align-items-center">
             @Html.LabelFor(model => model.EngellilikDurumu, labelText: "Engellilik Durumu", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-10 d-flex " id="labelPadding">
                 <div class="checkbox">
                     @Html.EditorFor(model => model.EngellilikDurumu)
                     @Html.ValidationMessageFor(model => model.EngellilikDurumu, "", new { @class = "text-danger" })
                 </div>
             </div>
         </div>
-
-        <div class="form-group">
+        <br />
+        <div class="d-flex align-items-center">
             @Html.LabelFor(model => model.DogumTarihi, labelText: "Doğum Tarihi", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-10 d-flex " id="labelPadding">
                 @Html.EditorFor(model => model.DogumTarihi, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.DogumTarihi, "", new { @class = "text-danger" })
             </div>
         </div>
-
-        <div class="form-group">
+        <br />
+        <div class="d-flex align-items-center">
             @Html.LabelFor(model => model.İseGirisTarihi, labelText: "İşe Giriş Tarihi", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-10 d-flex " id="labelPadding">
                 @Html.EditorFor(model => model.İseGirisTarihi, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.İseGirisTarihi, "", new { @class = "text-danger" })
             </div>
         </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.AktifPasif,labelText:"Aktif Pasif", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+        <br />
+        <div class="d-flex align-items-center">
+            @Html.LabelFor(model => model.AktifPasif, labelText: "Aktif Pasif", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10 d-flex " id="labelPadding">
                 <div class="checkbox">
                     @Html.EditorFor(model => model.AktifPasif)
                     @Html.ValidationMessageFor(model => model.AktifPasif, "", new { @class = "text-danger" })
                 </div>
             </div>
         </div>
-        <div class="form-group">
-            @Html.LabelFor(model => model.DepartmanId,"Departman Id", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+        <br />
+        <div class="d-flex align-items-center">
+            @Html.LabelFor(model => model.DepartmanId, "Departman Id", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10 d-flex " id="labelPadding">
                 <div class="checkbox">
                     @Html.EditorFor(model => model.DepartmanId)
                     @Html.ValidationMessageFor(model => model.AktifPasif, "", new { @class = "text-danger" })
                 </div>
             </div>
         </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.CikisTarihi,labelText:"Çıkış Tarihi", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+        <br />
+        <div class="d-flex align-items-center">
+            @Html.LabelFor(model => model.CikisTarihi, labelText: "Çıkış Tarihi", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10 d-flex " id="labelPadding">
                 @Html.EditorFor(model => model.CikisTarihi, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.CikisTarihi, "", new { @class = "text-danger" })
             </div>
         </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.EsiTc, labelText:"Eşinin TC Numarası",htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+        <br />
+        <div class="d-flex align-items-center">
+            @Html.LabelFor(model => model.EsiTc, labelText: "Eşinin TC Numarası", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10 d-flex " id="labelPadding">
                 @Html.EditorFor(model => model.EsiTc, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.EsiTc, "", new { @class = "text-danger" })
             </div>
         </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.EsiAdiSoyadi, labelText:"Eşinin Adı Soyadı", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+        <br />
+        <div class="d-flex align-items-center">
+            @Html.LabelFor(model => model.EsiAdiSoyadi, labelText: "Eşinin Adı Soyadı", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10 d-flex " id="labelPadding">
                 @Html.EditorFor(model => model.EsiAdiSoyadi, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.EsiAdiSoyadi, "", new { @class = "text-danger" })
             </div>
         </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.EsiTelefon,labelText:"Eşinin Telefon Numarası" ,htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+        <br />
+        <div class="d-flex align-items-center">
+            @Html.LabelFor(model => model.EsiTelefon, labelText: "Eşinin Telefon Numarası", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10 d-flex " id="labelPadding">
                 @Html.EditorFor(model => model.EsiTelefon, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.EsiTelefon, "", new { @class = "text-danger" })
             </div>
         </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.EsiIsDurumu,labelText:"Eşinin İş Durumu" ,htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+        <br />
+        <div class="d-flex align-items-center">
+            @Html.LabelFor(model => model.EsiIsDurumu, labelText: "Eşinin İş Durumu", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10 d-flex " id="labelPadding">
                 @Html.EditorFor(model => model.EsiIsDurumu, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.EsiIsDurumu, "", new { @class = "text-danger" })
             </div>
         </div>
-
-        <div class="form-group">
+        <br />
+        <div class="d-flex align-items-center">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Ekle" class="btn btn-default" />
             </div>

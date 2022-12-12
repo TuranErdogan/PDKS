@@ -1,0 +1,111 @@
+﻿@model IEnumerable<pdks.Models.PersonelSaglikDurumlari>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Alerji)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KalpHastaligi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KasEklem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GormeKusuru)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsitmeKaybi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BagisiklikGuclugu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KronikHastalik)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AstimKoah)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SindirimRahatsizliklari)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aciklama)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RuhsalHastalik)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ZihinselHastalik)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KanGrubu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonelOzlukBilgileri.TcKimlik)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Alerji)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KalpHastaligi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KasEklem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GormeKusuru)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsitmeKaybi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BagisiklikGuclugu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KronikHastalik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AstimKoah)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SindirimRahatsizliklari)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aciklama)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RuhsalHastalik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ZihinselHastalik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KanGrubu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonelOzlukBilgileri.TcKimlik)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

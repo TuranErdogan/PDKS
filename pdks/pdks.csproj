@@ -239,6 +239,12 @@
     <Content Include="Views\IzinTakip\IzinKayit.cshtml" />
     <Content Include="Views\PersonelSaglikDurumu\Index.cshtml" />
     <Content Include="Views\IzinTakip\Update1.cshtml" />
+    <Content Include="Views\Departmanlar\Ekle.cshtml" />
+    <Content Include="Views\Departmanlar\Index.cshtml" />
+    <Content Include="Views\Ozluk\Guncelle.cshtml" />
+    <Content Include="Views\PersonelSaglikDurumu\Güncelle.cshtml" />
+    <Content Include="Views\PersonelSaglikDurumu\KayitEkle.cshtml" />
+    <Content Include="Views\Puantaj\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

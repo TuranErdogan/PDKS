@@ -8,6 +8,7 @@ namespace pdks.Controllers
 {
     public class PuantajController : Controller
     {
+        // Paylaş
         // GET: Puantaj
         public ActionResult Index()
         {

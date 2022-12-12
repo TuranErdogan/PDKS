@@ -7,30 +7,28 @@ using System.Web.Mvc;
 
 namespace pdks.Controllers
 {
-    public class IzinTakipController : Controller
+
+    public class DepartmanlarController : Controller
     {
         PDKSEntities db = new PDKSEntities();
-        // GET: IzinTakip
+        // GET: Departmanlar
         public ActionResult Index()
         {
-            var izin = db.IzinTakip.ToList();
-            return View(izin);
+            var Veri = db.Departmanlar.ToList();
+            return View(Veri);
         }
-
-        public ActionResult IzinKayit()
+        [HttpGet]
+        public ActionResult Ekle()
         {
             return View();
         }
         [HttpPost]
-        public ActionResult IzinKayit(Models.IzinTakip ızinTakip)
+        public ActionResult Ekle(Models.Departmanlar departmanlar)
         {
-
-            db.IzinTakip.Add(ızinTakip);
+            db.Departmanlar.Add(departmanlar);
             db.SaveChanges();
 
-            return View();  /*aaaaaaaaaaa*/
-            
-
+            return View();
         }
     }
 }

@@ -169,6 +169,7 @@
     <Compile Include="Controllers\IzinTakipController.cs" />
     <Compile Include="Controllers\OzlukController.cs" />
     <Compile Include="Controllers\PersonelSaglikDurumuController.cs" />
+    <Compile Include="Controllers\PuantajController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -239,6 +240,7 @@
     <Content Include="Views\PersonelSaglikDurumu\Index.cshtml" />
     <Content Include="Views\Departmanlar\Index.cshtml" />
     <Content Include="Views\Departmanlar\Ekle.cshtml" />
+    <Content Include="Views\Puantaj\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

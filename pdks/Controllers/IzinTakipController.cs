@@ -28,7 +28,7 @@ namespace pdks.Controllers
             db.IzinTakip.Add(ızinTakip);
             db.SaveChanges();
 
-            return View();
+            return View();  /*aaaaaaaaaaa*/
             
 
         }

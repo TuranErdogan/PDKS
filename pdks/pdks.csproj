@@ -246,6 +246,8 @@
     <Content Include="Views\PersonelSaglikDurumu\KayitEkle.cshtml" />
     <Content Include="Views\Puantaj\Index.cshtml" />
     <Content Include="Views\Departmanlar\Guncelle.cshtml" />
+    <Content Include="Views\Puantaj\Ekle.cshtml" />
+    <Content Include="Views\Puantaj\Guncelle.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

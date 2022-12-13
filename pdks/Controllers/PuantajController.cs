@@ -65,5 +65,38 @@ namespace pdks.Controllers
             return View(Ekran);
 
         }
+        [HttpGet]
+        public ActionResult Sil(int id) 
+        {
+            if (id == null) 
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest); /* hata mesajı gönderir */
+            }
+            Models.PersonelPuantaj SilinecekPuantaj = db.PersonelPuantaj.Find(id);
+            if (SilinecekPuantaj == null)
+            {
+                return HttpNotFound(); /* kayıt bulunamadı mesajı döner */
+            }
+            return View(SilinecekPuantaj);
+        }
+        [HttpPost]
+        public ActionResult Sil(Models.PersonelPuantaj SilinecekPuantaj, int id)
+        {
+            Models.PersonelPuantaj SilinmisPuantaj = db.PersonelPuantaj.Find(id);
+            db.PersonelPuantaj.Remove(SilinmisPuantaj);
+            db.SaveChanges();
+            return RedirectToAction("index");
+        }
+
+        public ActionResult Goster(int id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Models.PersonelPuantaj Gosterilecek = db.PersonelPuantaj.Find(id);
+
+            return View();
+        }
     }
 }

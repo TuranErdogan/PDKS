@@ -15,7 +15,7 @@ namespace pdks.Controllers
         // GET: Puantaj
         public ActionResult Index()
         {
-            var Veri = db.PersonelOzlukBilgileri.ToList();
+            var Veri = db.PersonelPuantaj.ToList();
 
 
             return View(Veri);
@@ -32,9 +32,9 @@ namespace pdks.Controllers
 
             db.PersonelPuantaj.Add(Puantaj);
             db.SaveChanges();
-
-            return View();
-            ;
+            return RedirectToAction("Index");
+            return View(Puantaj);
+            
 
         }
 
@@ -96,7 +96,7 @@ namespace pdks.Controllers
             }
             Models.PersonelPuantaj Gosterilecek = db.PersonelPuantaj.Find(id);
 
-            return View();
+            return View(Gosterilecek);
         }
     }
 }

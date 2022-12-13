@@ -1,0 +1,50 @@
+﻿@model pdks.Models.PersonelPuantaj
+
+@{
+    ViewBag.Title = "Goster";
+}
+
+<h2>Goster</h2>
+
+<div>
+    <h4>PersonelPuantaj</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CalismaGunu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CalismaGunu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GirisSaati)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GirisSaati)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CikisSaati)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CikisSaati)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mazeret)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mazeret)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

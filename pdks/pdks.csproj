@@ -249,6 +249,7 @@
     <Content Include="Views\Puantaj\Ekle.cshtml" />
     <Content Include="Views\Puantaj\Guncelle.cshtml" />
     <Content Include="Views\IzinTakip\Sil.cshtml" />
+    <Content Include="Views\IzinTakip\Detay.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

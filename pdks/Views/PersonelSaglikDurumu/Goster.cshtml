@@ -1,0 +1,133 @@
+﻿@model pdks.Models.PersonelSaglikDurumlari
+
+@{
+    ViewBag.Title = "Goster";
+}
+
+<h2>Goster</h2>
+
+<div>
+    <h4>PersonelSaglikDurumlari</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Alerji)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Alerji)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KalpHastaligi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KalpHastaligi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KasEklem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KasEklem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GormeKusuru)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GormeKusuru)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsitmeKaybi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsitmeKaybi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BagisiklikGuclugu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BagisiklikGuclugu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KronikHastalik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KronikHastalik)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AstimKoah)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AstimKoah)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SindirimRahatsizliklari)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SindirimRahatsizliklari)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aciklama)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aciklama)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RuhsalHastalik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RuhsalHastalik)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ZihinselHastalik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ZihinselHastalik)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KanGrubu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KanGrubu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonelOzlukBilgileri.TcKimlik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersonelOzlukBilgileri.TcKimlik)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @* neden modelin id si? niye indexte ki gibi itemin degil sorusunun cevabı;en üstte model olarak geldi
+        modelin içerisine item gonderilmedi eğer ekrana bi liste geliyosa model gelir. liste gibi birden çok kayıt
+        geliyosa IEnumerable yani item olur*@
+    @Html.ActionLink("Güncelle", "Guncelle", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -11,16 +11,21 @@ namespace pdks.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class PersonelSaglikDurumlari
     {
         public int Id { get; set; }
         public int PersonelId { get; set; }
         public bool Alerji { get; set; }
         public bool KalpHastaligi { get; set; }
+        [Display(Name = "Kas" )]
         public bool KasEklem { get; set; }
+        [Display(Name = "Görme")]
         public bool GormeKusuru { get; set; }
+        [Display(Name = "İşitme")]
         public bool IsitmeKaybi { get; set; }
+        [Display(Name = "Bağışıklık")]
         public bool BagisiklikGuclugu { get; set; }
         public bool KronikHastalik { get; set; }
         public bool AstimKoah { get; set; }

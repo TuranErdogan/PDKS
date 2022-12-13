@@ -1,0 +1,179 @@
+﻿@model pdks.Models.PersonelOzlukBilgileri
+
+@{
+    ViewBag.Title = "Goster";
+}
+
+<h2>Goster</h2>
+
+<div>
+    <h4>PersonelOzlukBilgileri</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TcKimlik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TcKimlik)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Soyad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Soyad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Unvan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Unvan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KurumSicilNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KurumSicilNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CepTelefonu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CepTelefonu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Eposta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Eposta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MedeniDurum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MedeniDurum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EvAdresi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EvAdresi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Askerlik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Askerlik)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ehliyet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ehliyet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EngellilikDurumu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EngellilikDurumu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DogumTarihi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DogumTarihi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.İseGirisTarihi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.İseGirisTarihi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AktifPasif)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AktifPasif)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CikisTarihi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CikisTarihi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EsiTc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EsiTc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EsiAdiSoyadi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EsiAdiSoyadi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EsiTelefon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EsiTelefon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EsiIsDurumu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EsiIsDurumu)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Guncelle", "Guncelle", new { id = Model.Id }) |
+    @Html.ActionLink("Sil", "Sil", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

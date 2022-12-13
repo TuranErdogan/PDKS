@@ -101,6 +101,9 @@
             @Html.DisplayFor(modelItem => item.PersonelOzlukBilgileri.TcKimlik)
         </td>
         <td>
+            @Html.ActionLink("Güncelle", "Güncelle", new { id=item.Id }) |
+            @Html.ActionLink("Göster", "Goster", new { id=item.Id }) |
+            @Html.ActionLink("Sil", "Sil", new { id=item.Id })
             @Html.ActionLink("Güncelle", "Güncelle", new { id=item.Id }, new {@class="btn btn-warning"}) 
             @Html.ActionLink("Details", "Details", new { id=item.Id },new { @class = "btn btn-info" }) 
             @Html.ActionLink("Delete", "Delete", new { id=item.Id }, new { @class = "btn btn-danger" })

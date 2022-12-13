@@ -250,6 +250,8 @@
     <Content Include="Views\Puantaj\Guncelle.cshtml" />
     <Content Include="Views\Ozluk\Sil.cshtml" />
     <Content Include="Views\Ozluk\Goster.cshtml" />
+    <Content Include="Views\Departmanlar\Sil.cshtml" />
+    <Content Include="Views\Departmanlar\Detay.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -112,3 +112,4 @@ namespace pdks.Controllers
 //sonra view oluşturulur 
 //indexte ki ActionLink kısmı değiştirilir(birinci sitede gösterilcek olan yer.2.isim ise actionresulttaki isim olur.
 //indexte calıstırılır.
+//indexte css özelliği yapılır. models te de yapılır.

@@ -27,6 +27,7 @@ namespace pdks.Controllers
         {
             db.IzinTakip.Add(ızinTakip);
             db.SaveChanges();
+            return RedirectToAction("index");
             return View();  /*aaaaaaaaaaa*/           
 
         }

@@ -1,0 +1,72 @@
+﻿@model pdks.Models.IzinTakip
+
+@{
+    ViewBag.Title = "Sil";
+}
+
+<h2>Sil</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>IzinTakip</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IzinTalepTarihi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IzinTalepTarihi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IzinBaslangicTarihi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IzinBaslangicTarihi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.İzinBitisTarihi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.İzinBitisTarihi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IzinliGunSayisi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IzinliGunSayisi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IzinTipi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IzinTipi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonelOzlukBilgileri.TcKimlik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersonelOzlukBilgileri.TcKimlik)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

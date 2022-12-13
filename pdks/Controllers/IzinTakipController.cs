@@ -27,6 +27,7 @@ namespace pdks.Controllers
         {
             db.IzinTakip.Add(ızinTakip);
             db.SaveChanges();
+            return RedirectToAction("index");
             return View();  /*aaaaaaaaaaa*/           
 
         }
@@ -35,7 +36,7 @@ namespace pdks.Controllers
         {
             if (Id==null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);//hata mesajı
             }
             Models.IzinTakip PersonelIzın = db.IzinTakip.Find(Id);
 
@@ -50,6 +51,30 @@ namespace pdks.Controllers
                 return RedirectToAction("Index");   
             }
             return View(Ekran);
+        }
+        public ActionResult Sil(int Id) 
+        {
+            if (Id==null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);//hata mesajı
+            }
+            Models.IzinTakip Silinecek = db.IzinTakip.Find(Id);
+            if (Silinecek==null)
+            {
+                return HttpNotFound();// database de olmayan bi ıd gelirse veya girilirse
+            }
+            return View(Silinecek);
+        }
+        [HttpPost]
+        public ActionResult Sil(Models.IzinTakip IzinSil , int Id)
+        {
+            Models.IzinTakip Silinmis = db.IzinTakip.Find(Id);
+            //1. yöntem
+            db.IzinTakip.Remove(Silinmis);
+            //2. yöntem
+            db.SaveChanges();
+            return RedirectToAction("index");
+
         }
     }
 }

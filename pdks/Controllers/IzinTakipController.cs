@@ -74,7 +74,17 @@ namespace pdks.Controllers
             //2. yöntem
             db.SaveChanges();
             return RedirectToAction("index");
+        }
+        public ActionResult Detay (int Id)         
+        {
+            if (Id==null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Models.IzinTakip Detay1 = db.IzinTakip.Find(Id); 
 
+
+         return View(Detay1);
         }
     }
 }

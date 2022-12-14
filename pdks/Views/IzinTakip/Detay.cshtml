@@ -5,11 +5,12 @@
 }
 
 <h2>Detay</h2>
+<link href="~/CSS/Sayfa.css" rel="stylesheet" />
 
 <div>
     <h4>IzinTakip</h4>
     <hr />
-    <dl class="dl-horizontal">
+    <dl class="dl-vertical">
         <dt>
             @Html.DisplayNameFor(model => model.IzinTalepTarihi)
         </dt>
@@ -62,5 +63,5 @@
 </div>
 <p>
     @Html.ActionLink("Detay", "Detay", new { id = Model.Id }) |
-    @Html.ActionLink("Listeye Dön","Index")
+    @Html.ActionLink("Listeye Dön", "Index")
 </p>

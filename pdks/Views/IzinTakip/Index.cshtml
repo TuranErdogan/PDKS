@@ -6,8 +6,9 @@
 
 <h2>Index</h2>
 
+
 <p>
-    @Html.ActionLink("Yeni Kayıt", "IzinKayit")   
+    @Html.ActionLink("Yeni Kayıt", "IzinKayit",new { @class = "btn btn-primary" })
 </p>
 <table class="table">
     <tr>
@@ -32,33 +33,34 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.IzinTalepTarihi)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.IzinBaslangicTarihi)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.İzinBitisTarihi)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.IzinliGunSayisi)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.IzinTipi)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PersonelOzlukBilgileri.TcKimlik)
-        </td>
-        <td>
-            @Html.ActionLink("Güncelle", "Update1", new { id = item.Id }) |
-            @Html.ActionLink("Sil", "Sil", new { id = item.Id })
-            @Html.ActionLink("Detay", "Detay", new { id = item.Id }) |
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IzinTalepTarihi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IzinBaslangicTarihi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.İzinBitisTarihi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IzinliGunSayisi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IzinTipi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PersonelOzlukBilgileri.TcKimlik)
+            </td>
+            <td>
+                @Html.ActionLink("Güncelle", "Update1", new { id = item.Id },new {@class = "btn btn-success"}) 
+                @Html.ActionLink("Sil", "Sil", new { id = item.Id },  new { @class = "btn btn-danger" } ) 
+                @Html.ActionLink("Detay", "Detay", new { id = item.Id } ,new {@class = "btn btn-secondary"}) 
 
-        </td>
-    </tr>
-}
+            </td>
+        </tr>
+    }
 
 </table>

@@ -11,15 +11,22 @@ namespace pdks.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class IzinTakip
     {
         public int Id { get; set; }
+        [Display(Name = "Personel Id")]
         public int PersonelId { get; set; }
+        [Display(Name = "İzin Talep Tarihi")]
         public System.DateTime IzinTalepTarihi { get; set; }
+        [Display(Name = "İzin Başlangıç Tarihi")]
         public System.DateTime IzinBaslangicTarihi { get; set; }
+        [Display(Name = "İzin Bitiş Tarihi")]
         public System.DateTime İzinBitisTarihi { get; set; }
+        [Display(Name = "İzin Süresi(Gün)")]
         public int IzinliGunSayisi { get; set; }
+        [Display(Name = "İzin Türü")]
         public int IzinTipi { get; set; }
     
         public virtual PersonelOzlukBilgileri PersonelOzlukBilgileri { get; set; }

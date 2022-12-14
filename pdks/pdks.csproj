@@ -114,6 +114,7 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="CSS\Btns.css" />
     <Content Include="Global.asax" />
     <Content Include="Models\Hepsi.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

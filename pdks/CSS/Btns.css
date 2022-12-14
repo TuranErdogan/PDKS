@@ -1,0 +1,9 @@
+﻿.body {
+    background-color:#ffffff
+    color:#000000
+}
+.body:hover
+{
+    background-color:#e42511e9
+    color:#ffffff
+}

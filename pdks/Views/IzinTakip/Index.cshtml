@@ -4,66 +4,68 @@
     ViewBag.Title = "Index";
 }
 <div class="bg-light">
-    <h2>Personel İzin Kayıt Listesi</h2>
+    <h2 class="text-lg-center font-monospace">Personel İzin Kayıt Listesi</h2>
 </div>
 
 
-<table >
-    <td class="font-monospace col-3">
-        @Html.ActionLink("Yeni Kayıt", "IzinKayit", new { @class = "btn btn-success" })
-    </td>
-</table>
-<table class="table table-striped table-bordered  table-hover table-dark ">
-    <tr class="table-active ">
-        <th class="font-monospace col-sm-3">
-            @Html.DisplayNameFor(model => model.IzinTalepTarihi)
-        </th>
-        <th class="font-monospace col-sm-3">
-            @Html.DisplayNameFor(model => model.IzinBaslangicTarihi)
-        </th>
-        <th class="font-monospace col-sm-3">
-            @Html.DisplayNameFor(model => model.İzinBitisTarihi)
-        </th>
-        <th class="font-monospace col-sm-3">
-            @Html.DisplayNameFor(model => model.IzinliGunSayisi)
-        </th>
-        <th class="font-monospace col-sm-2">
-            @Html.DisplayNameFor(model => model.IzinTipi)
-        </th>
-        <th class="font-monospace col-sm-2">
-           TC Kimlik No
-        </th>
-        <th></th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.IzinTalepTarihi)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IzinBaslangicTarihi)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.İzinBitisTarihi)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IzinliGunSayisi)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IzinTipi)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PersonelOzlukBilgileri.TcKimlik)
-            </td>
-            <td>
-                @Html.ActionLink("Güncelle", "Update1", new { id = item.Id },new {@class = "btn btn-success"}) 
-                @Html.ActionLink("Sil", "Sil", new { id = item.Id },  new { @class = "btn btn-danger" } ) 
-                @Html.ActionLink("Detay", "Detay", new { id = item.Id } ,new {@class = "btn btn-secondary"}) 
-
-            </td>
+    <table class="table table-responsive">
+        <thead class="font-monospace col-3">
+            @Html.ActionLink("Yeni Kayıt", "IzinKayit","", new { @class = "btn btn-success" })
+      
+        </thead>
+    </table>
+    <table class= "table table-responsive table-striped table-bordered  table-hover table-dark text-lg-center ">
+        <tr class="table-active ">
+            <th class="font-monospace col-sm-3">
+                @Html.DisplayNameFor(model => model.IzinTalepTarihi)
+            </th>
+            <th class="font-monospace col-sm-3">
+                @Html.DisplayNameFor(model => model.IzinBaslangicTarihi)
+            </th>
+            <th class="font-monospace col-sm-3">
+                @Html.DisplayNameFor(model => model.İzinBitisTarihi)
+            </th>
+            <th class="font-monospace col-sm-3">
+                @Html.DisplayNameFor(model => model.IzinliGunSayisi)
+            </th>
+            <th class="font-monospace col-sm-3">
+                @Html.DisplayNameFor(model => model.IzinTipi)
+            </th>
+            <th class="font-monospace col-sm-3">
+                TC Kimlik No
+            </th>
+            <th></th>
         </tr>
-    }
 
-</table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IzinTalepTarihi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IzinBaslangicTarihi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.İzinBitisTarihi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IzinliGunSayisi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IzinTipi)
+                </td>
+                <td class="col-md-2">
+                    @Html.DisplayFor(modelItem => item.PersonelOzlukBilgileri.TcKimlik)
+                </td>
+                <td class="col-md-3">
+                    @Html.ActionLink("Güncelle", "Update1", new { id = item.Id }, new { @class = "btn btn-success" })
+                    @Html.ActionLink("Sil", "Sil", new { id = item.Id }, new { @class = "btn btn-danger" })
+                    @Html.ActionLink("Detay", "Detay", new { id = item.Id }, new { @class = "btn btn-secondary" })
+
+                </td>
+            </tr>
+        }
+
+    </table>
+

@@ -75,7 +75,7 @@ namespace pdks.Controllers
             db.SaveChanges();
             return RedirectToAction("index");
         }
-        public ActionResult Detay (int Id)         
+        public ActionResult Detay(int Id)         
         {
             if (Id==null)
             {

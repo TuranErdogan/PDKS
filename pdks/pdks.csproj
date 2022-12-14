@@ -256,6 +256,7 @@
     <Content Include="Views\Departmanlar\Detay.cshtml" />
     <Content Include="Views\Puantaj\Sil.cshtml" />
     <Content Include="Views\Puantaj\Goster.cshtml" />
+    <Content Include="Views\IzinTakip\Detay.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -33,9 +33,10 @@ namespace pdks.Controllers
 
             db.PersonelOzlukBilgileri.Add(Ozluk);
             db.SaveChanges();
+            return RedirectToAction("index");
 
             return View();
-            ;
+            
 
         }
 
@@ -65,6 +66,42 @@ namespace pdks.Controllers
 
             return View(Ekran);
 
+        }
+
+        public ActionResult Sil(int id)
+        { 
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Models.PersonelOzlukBilgileri Silinecek = db.PersonelOzlukBilgileri.Find(id);
+            if (Silinecek == null)
+            {
+                return HttpNotFound();
+            } 
+            return View(Silinecek);        
+        }
+        [HttpPost]
+        public ActionResult Sil (Models.PersonelOzlukBilgileri Silinecek,int id)
+          
+        {   
+             Models.PersonelOzlukBilgileri Silinmis = db.PersonelOzlukBilgileri.Find(id);
+             db.PersonelOzlukBilgileri.Remove(Silinmis);
+            db.SaveChanges();
+
+            return RedirectToAction("index");
+        }
+        public ActionResult Goster(int id)
+        {
+
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Models.PersonelOzlukBilgileri Gosterilecek = db.PersonelOzlukBilgileri.Find(id);
+
+
+            return View(Gosterilecek);
         }
     }
 }

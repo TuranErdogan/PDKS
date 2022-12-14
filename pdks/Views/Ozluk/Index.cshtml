@@ -144,8 +144,8 @@
         </td>
         <td>
             @Html.ActionLink("Guncelle", "Guncelle", new { id = item.Id }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Göster", "Goster", new { id=item.Id}) |
+            @Html.ActionLink("Sil", "Sil", new {  id= item.Id  })
         </td>
     </tr>
 }

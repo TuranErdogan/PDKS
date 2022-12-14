@@ -28,8 +28,7 @@ namespace pdks.Controllers
         {
             db.Departmanlar.Add(departmanlar);
             db.SaveChanges();
-
-            return View();
+            return RedirectToAction("Index");
         }
         [HttpGet]
         public ActionResult Guncelle(int id)
@@ -57,6 +56,38 @@ namespace pdks.Controllers
 
             return View(EkranaGelenDepartman);
 
+        }
+        public ActionResult Sil(int id)
+        {
+            if (id == null)
+            {
+
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest); /* hata mesajı gönderir*/
+            }
+            Models.Departmanlar SilinecekDepartman = db.Departmanlar.Find(id);
+            if (SilinecekDepartman == null)
+            {
+                return HttpNotFound(); /*kayıt bulunamadı mesajı döner*/
+            }
+            return View(SilinecekDepartman);  
+        }
+        [HttpPost] 
+        public ActionResult Sil(Models.Departmanlar SilinecekDepartman, int id)
+        {
+            Models.Departmanlar SilinmisDepartman = db.Departmanlar.Find(id);
+            db.Departmanlar.Remove(SilinmisDepartman);
+            db.SaveChanges();
+            return RedirectToAction("index");
+        }
+        public ActionResult Detay(int id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Models.Departmanlar GosterilecekDepartman = db.Departmanlar.Find(id);
+
+            return View(GosterilecekDepartman);
         }
 
 

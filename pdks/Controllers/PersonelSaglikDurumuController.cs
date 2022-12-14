@@ -28,6 +28,7 @@ namespace pdks.Controllers
         {
             db.PersonelSaglikDurumlari.Add(Saglik);
             db.SaveChanges();
+            return RedirectToAction("Index");
 
             return View();
         }
@@ -60,5 +61,55 @@ namespace pdks.Controllers
             }
             return View(Saglik);
         }
+        [HttpGet]
+        public ActionResult Sil(int id)
+        {
+                //bir sebepten dolayhı boş ghelirse
+            if (id==null)
+            {
+                //hata mesajı ver demek bu.
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest); 
+            }
+            Models.PersonelSaglikDurumlari Silinecek = db.PersonelSaglikDurumlari.Find(id);
+            // kayıtlarda olmayan bir id girilirse;
+            if (Silinecek == null)
+            {
+                return HttpNotFound();
+            }
+                return View(Silinecek);
+        }
+        [HttpPost]
+        //ekrandaki modelden silinecek id yi al.
+        public ActionResult Sil ( Models.PersonelSaglikDurumlari Silinecek,int id)
+        {
+            //ekrandaki silinmiş hali bul
+            Models.PersonelSaglikDurumlari Silinmis = db.PersonelSaglikDurumlari.Find(id);
+            // sil knk
+            db.PersonelSaglikDurumlari.Remove(Silinmis); 
+            db.SaveChanges();  
+                //silinmiş halini listele
+            return RedirectToAction("Index");
+        }
+        //details te get post yok :)
+        public ActionResult Goster(int id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Models.PersonelSaglikDurumlari Gosterilecek = db.PersonelSaglikDurumlari.Find(id);
+            
+            return View(Gosterilecek);
+        }
     }
 }
+
+
+
+
+//*****************************NOTLARIMISSSSS (BERNAKO-SİNEMKO)*********************************************
+//controller oluşturulur, gösterme ve işlem yapılıp gösterilecekse get ve post kullanılır actionresultlarda.
+//sonra view oluşturulur 
+//indexte ki ActionLink kısmı değiştirilir(birinci sitede gösterilcek olan yer.2.isim ise actionresulttaki isim olur.
+//indexte calıstırılır.
+//indexte css özelliği yapılır. models te de yapılır.

@@ -7,7 +7,7 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Yeni Departman Ekle", "Ekle")
 </p>
 <table class="table">
     <tr>
@@ -24,8 +24,8 @@
         </td>
         <td>
             @Html.ActionLink("Guncelle", "Guncelle", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Detay", "Detay", new { id=item.Id }) |
+            @Html.ActionLink("Sil", "Sil", new { id=item.Id })
         </td>
     </tr>
 }

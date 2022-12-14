@@ -3,13 +3,16 @@
 @{
     ViewBag.Title = "Index";
 }
+<div class="body1">
+    <h2>Personel İzin Kayıt Listesi</h2>
+</div>
 
-<h2>Index</h2>
 
-
-<p>
-    @Html.ActionLink("Yeni Kayıt", "IzinKayit")
-</p>
+<table>
+    <td>
+        @Html.ActionLink("Yeni Kayıt", "IzinKayit", new { @class = "btn btn-success" })
+    </td>
+</table>
 <table class="table">
     <tr>
         <th>

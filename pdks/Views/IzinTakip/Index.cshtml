@@ -3,35 +3,35 @@
 @{
     ViewBag.Title = "Index";
 }
-<div class="body1">
+<div class="bg-light">
     <h2>Personel İzin Kayıt Listesi</h2>
 </div>
 
 
-<table>
-    <td>
+<table >
+    <td class="font-monospace col-3">
         @Html.ActionLink("Yeni Kayıt", "IzinKayit", new { @class = "btn btn-success" })
     </td>
 </table>
-<table class="table">
-    <tr>
-        <th>
+<table class="table table-striped table-bordered  table-hover table-dark ">
+    <tr class="table-active ">
+        <th class="font-monospace col-sm-3">
             @Html.DisplayNameFor(model => model.IzinTalepTarihi)
         </th>
-        <th>
+        <th class="font-monospace col-sm-3">
             @Html.DisplayNameFor(model => model.IzinBaslangicTarihi)
         </th>
-        <th>
+        <th class="font-monospace col-sm-3">
             @Html.DisplayNameFor(model => model.İzinBitisTarihi)
         </th>
-        <th>
+        <th class="font-monospace col-sm-3">
             @Html.DisplayNameFor(model => model.IzinliGunSayisi)
         </th>
-        <th>
+        <th class="font-monospace col-sm-2">
             @Html.DisplayNameFor(model => model.IzinTipi)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PersonelOzlukBilgileri.TcKimlik)
+        <th class="font-monospace col-sm-2">
+           TC Kimlik No
         </th>
         <th></th>
     </tr>

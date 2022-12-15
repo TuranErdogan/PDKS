@@ -53,7 +53,7 @@ namespace pdks.Controllers
             return View(PersonelP);
         }
         [HttpPost]
-        public ActionResult Guncelle(Models.PersonelPuantaj Ekran)
+        public ActionResult Guncelle(Models.PersonelPuantaj Ekran,int id)
         {
             if (ModelState.IsValid)
             {

@@ -4,54 +4,69 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Personel Puantaj Giriş</h2>
 
 <p>
     @Html.ActionLink("Yeni Kayıt Ekle", "Ekle")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.CalismaGunu)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.GirisSaati)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CikisSaati)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Mazeret)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PersonelOzlukBilgileri.TcKimlik)
-        </th>
-        <th></th>
-    </tr>
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>
+                Çalışma Günü
+                @*@Html.DisplayNameFor(model => model.CalismaGunu)*@
+            </th>
+            <th>
+                Giriş Saati
+                @*@Html.DisplayNameFor(model => model.GirisSaati)*@
+            </th>
+            <th>
+                Çıkış Saati
+                @*@Html.DisplayNameFor(model => model.CikisSaati)*@
+            </th>
+            <th>
+                Mazeret
+                @*@Html.DisplayNameFor(model => model.Mazeret)*@
+            </th>
+            <th>
+                T.C. Kimlik No
+                @*@Html.DisplayNameFor(model => model.PersonelOzlukBilgileri.TcKimlik)*@
+            </th>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.CalismaGunu)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.GirisSaati)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CikisSaati)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Mazeret)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PersonelOzlukBilgileri.TcKimlik)
-        </td>
-        <td>
-            @Html.ActionLink("Guncelle", "Guncelle", new { id=item.Id }) |
-            @Html.ActionLink("Goster", "Goster", new { id=item.Id }) |
-            @Html.ActionLink("Sil", "Sil", new { id=item.Id })
-        </td>
-    </tr>
-}
+            <th></th>
+        </tr>
+    </thead>
+
+
+    @foreach (var item in Model)
+    {
+        string Tarih = item.CalismaGunu.Date.ToString("dd-MM-yyyy") + " " + item.CalismaGunu.DayOfWeek;
+        string SaatGiris = item.GirisSaati.ToString("HH:mm");
+        string SaatCikis = item.CikisSaati.ToString("HH:mm");
+        <tr>
+            <td>
+                <label>@Tarih</label>
+            </td>
+            <td>
+                <label>@SaatGiris</label>
+                @*@Html.DisplayFor(modelItem => item.GirisSaati)*@
+            </td>
+            <td>
+                <label>@SaatCikis</label>
+                @*@Html.DisplayFor(modelItem => item.CikisSaati)*@
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mazeret)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PersonelOzlukBilgileri.TcKimlik)
+            </td>
+            <td>
+                @Html.ActionLink("Güncelle", "Guncelle", new { id = item.Id }, new { @class = "btn", @style = "background-color:lightblue;" })  
+                @Html.ActionLink("Göster", "Goster", new { id = item.Id }, new { @class = "btn", @style = "background-color:lightblue;" })  
+                @Html.ActionLink("Sil", "Sil", new { id = item.Id }, new { @class = "btn", @style = "background-color:lightblue;" })
+            </td>
+        </tr>
+    }
 
 </table>

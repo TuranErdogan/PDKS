@@ -11,11 +11,13 @@ namespace pdks.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class PersonelPuantaj
     {
         public int Id { get; set; }
         public int PersonelId { get; set; }
+        [Display(Name="Gün")]
         public System.DateTime CalismaGunu { get; set; }
         public System.DateTime GirisSaati { get; set; }
         public System.DateTime CikisSaati { get; set; }

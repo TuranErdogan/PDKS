@@ -23,6 +23,8 @@ namespace pdks.Controllers
         [HttpGet]
         public ActionResult Ekle()
         {
+
+            ViewBag.Personel = new SelectList(db.PersonelOzlukBilgileri, "Id", "Ad");
             return View();
         }
 

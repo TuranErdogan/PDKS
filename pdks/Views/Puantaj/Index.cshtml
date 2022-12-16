@@ -13,8 +13,16 @@
     <thead class="table-dark">
         <tr>
             <th>
-                Çalışma Günü
-                @*@Html.DisplayNameFor(model => model.CalismaGunu)*@
+
+                @Html.DisplayNameFor(model => model.PersonelOzlukBilgileri.Ad)
+            </th>
+            <th>
+
+                @Html.DisplayNameFor(model => model.PersonelOzlukBilgileri.Soyad)
+            </th>
+            <th>
+
+                @Html.DisplayNameFor(model => model.CalismaGunu)
             </th>
             <th>
                 Giriş Saati
@@ -40,6 +48,13 @@
 
     @foreach (var item in Model)
     {
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonelOzlukBilgileri.Ad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonelOzlukBilgileri.Soyad)
+        </td>
+
         string Tarih = item.CalismaGunu.Date.ToString("dd-MM-yyyy") + " " + item.CalismaGunu.DayOfWeek;
         string SaatGiris = item.GirisSaati.ToString("HH:mm");
         string SaatCikis = item.CikisSaati.ToString("HH:mm");
@@ -62,8 +77,8 @@
                 @Html.DisplayFor(modelItem => item.PersonelOzlukBilgileri.TcKimlik)
             </td>
             <td>
-                @Html.ActionLink("Güncelle", "Guncelle", new { id = item.Id }, new { @class = "btn", @style = "background-color:lightblue;" })  
-                @Html.ActionLink("Göster", "Goster", new { id = item.Id }, new { @class = "btn", @style = "background-color:lightblue;" })  
+                @Html.ActionLink("Güncelle", "Guncelle", new { id = item.Id }, new { @class = "btn", @style = "background-color:lightblue;" })
+                @Html.ActionLink("Göster", "Goster", new { id = item.Id }, new { @class = "btn", @style = "background-color:lightblue;" })
                 @Html.ActionLink("Sil", "Sil", new { id = item.Id }, new { @class = "btn", @style = "background-color:lightblue;" })
             </td>
         </tr>

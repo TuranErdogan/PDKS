@@ -3,8 +3,8 @@
 @{
     ViewBag.Title = "Index";
 }
-<div class="bg-light">
-    <h2 class="text-center font-monospace">Personel İzin Kayıt Listesi</h2>
+<div class="bg-secondary ">
+    <h2 class="text-center font-monospace ">Personel İzin Kayıt Listesi</h2>
 </div>
 
 
@@ -35,6 +35,8 @@
                 TC Kimlik No
             </th>
             <th></th>
+            <th></th>
+            <th></th>
         </tr>
 
         @foreach (var item in Model)
@@ -59,10 +61,14 @@
                     @Html.DisplayFor(modelItem => item.PersonelOzlukBilgileri.TcKimlik)
                 </td>
                 <td class="col-md-3">
-                    @Html.ActionLink("Güncelle", "Update1", new { id = item.Id }, new { @class = "btn btn-success" })
-                    @Html.ActionLink("Sil", "Sil", new { id = item.Id }, new { @class = "btn btn-danger" })
-                    @Html.ActionLink("Detay", "Detay", new { id = item.Id }, new { @class = "btn btn-secondary" })
+                    @Html.ActionLink("Güncelle", "Update1", new { id = item.Id }, new { @class = "btn btn-success" })               
 
+                </td>
+                <td class="col-md-3">
+                    @Html.ActionLink("Sil", "Sil", new { id = item.Id }, new { @class = "btn btn-danger" })
+                </td>
+                <td class="col-md-3">                 
+                    @Html.ActionLink("Detay", "Detay", new { id = item.Id }, new { @class = "btn btn-secondary" })
                 </td>
             </tr>
         }
